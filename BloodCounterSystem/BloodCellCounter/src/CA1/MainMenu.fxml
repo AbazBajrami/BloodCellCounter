@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CA1.MenuController">
+   <children>
+      <MenuBar fx:id="menuBar" prefHeight="27.0" prefWidth="779.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="openImage" mnemonicParsing="false" onAction="#openTheImage" text="Open an Image" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fx:id="imageView1" fitHeight="243.0" fitWidth="339.0" layoutX="14.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imageView2" fitHeight="243.0" fitWidth="339.0" layoutX="426.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="triColorButton" layoutX="20.0" layoutY="318.0" mnemonicParsing="false" onAction="#turnToTriColor" text="TriColor" />
+      <Slider fx:id="hueSlider" layoutX="122.0" layoutY="324.0" majorTickUnit="30.0" max="360.0" min="-360.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Slider fx:id="saturationSlider" blockIncrement="0.0" layoutX="283.0" layoutY="324.0" majorTickUnit="0.1" max="1.0" min="-1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Slider fx:id="brightnessSlider" blockIncrement="0.0" layoutX="440.0" layoutY="324.0" majorTickUnit="0.1" max="1.0" min="-1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Text layoutX="181.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hue" />
+      <Text layoutX="482.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="brightness" />
+      <Text layoutX="326.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="saturation" />
+      <Button fx:id="whiteBloodCells" layoutX="596.0" layoutY="331.0" mnemonicParsing="false" onAction="#showWhiteBloodCells" text="White Blood Cells : " />
+      <Text fx:id="whiteCount" layoutX="735.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+      <Button fx:id="redBloodCells" layoutX="596.0" layoutY="297.0" mnemonicParsing="false" onAction="#showRedBloodCells" text="Red Blood Cells : " />
+      <Text fx:id="redCount" layoutX="735.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+   </children>
+</AnchorPane>
